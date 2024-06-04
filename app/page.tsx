@@ -5,8 +5,8 @@ export default function Home() {
 
 
         <h1>Test main page :)</h1>
-        <button onClick="Telegram.WebApp.showAlert('Hello World!');">Launch Alert</button>
-        <button onClick="showPopup();">Launch Popup</button>
+        <button>Launch Alert</button>
+        <button>Launch Popup</button>
 
 
         <h1>Buttons</h1>
