@@ -1,4 +1,5 @@
 import { promises as fs } from 'fs';
+import Link from "next/link";
 
 export default async function Home() {
   return (
@@ -6,13 +7,7 @@ export default async function Home() {
 
 
         <h1>Test main page :)</h1>
-        <button>Launch Alert</button>
-        <button>Launch Popup</button>
-
-
-        <h1>Buttons</h1>
-        <button>Expand Webview</button>
-        <button>Toggle Main Button</button>
+        <Link href="/test-book">Main page</Link>
       </main>
   );
 }
