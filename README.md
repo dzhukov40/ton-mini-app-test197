@@ -12,3 +12,8 @@ run dev server [http://localhost:3000]
 ```bash
 yarn dev
 ```
+
+### Add ebup
+0. смотрим пример: https://github.com/futurepress/epubjs-reader/blob/master/package.json
+1. run -> "yarn"
+2. run -> "yarn add epubjs jszip"
