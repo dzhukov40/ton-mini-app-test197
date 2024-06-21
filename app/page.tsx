@@ -7,6 +7,7 @@ export default async function Home() {
           <ul>
               <li><Link href="/test-book">Main page</Link></li>
               <li><Link href="/map">Map page</Link></li>
+              <li><Link href="/open-image">open-image-example</Link></li>
           </ul>
       </div>
 );
