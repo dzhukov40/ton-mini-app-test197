@@ -8,7 +8,8 @@ export default async function Home() {
               <li><Link href="/test-book">Main page</Link></li>
               <li><Link href="/map">Map page</Link></li>
               <li><Link href="/open-image">open-image-example</Link></li>
+              <li><Link href="/translate">translate</Link></li>
           </ul>
       </div>
-);
+  );
 }
