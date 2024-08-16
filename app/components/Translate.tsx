@@ -6,7 +6,7 @@ const Translate: React.FC = () => {
     const [inputText, setInputText] = useState('');
     const [translatedText, setTranslatedText] = useState('');
     const [loading, setLoading] = useState(false);
-    const [error, setError] = useState('');
+    const [error, setError] = useState<string | null>(null); // Set error to possibly be null
 
     const handleTranslate = async () => {
         setLoading(true);
@@ -32,7 +32,11 @@ const Translate: React.FC = () => {
                 setError(data.error || 'Translation failed');
             }
         } catch (err) {
-            setError(err.message || 'An error occurred');
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('An unknown error occurred');
+            }
         } finally {
             setLoading(false);
         }
