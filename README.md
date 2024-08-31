@@ -30,11 +30,18 @@ yarn dev
 5. go to -> "http://localhost:3000/map"
 
 
+### Add dexie.js
+1. install libs
+- "npm install dexie"
+- "npm install dexie-react-hooks"
+2. add file ""
+
+
 ### To do
 - add "[dexie.js](https://dexie.org/)"
 - add "[peer.js](https://peerjs.com/)"
 - add p2p sync time algoritm 
 - add protocol description of communication
--
+- choose npm or yarn. (don't use both)
 -
 

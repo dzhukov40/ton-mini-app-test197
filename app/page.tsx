@@ -9,6 +9,7 @@ export default async function Home() {
               <li><Link href="/map">Map page</Link></li>
               <li><Link href="/open-image">open-image-example</Link></li>
               <li><Link href="/translate">translate</Link></li>
+              <li><Link href="/dexie-test">dexie-test</Link></li>
           </ul>
       </div>
   );
