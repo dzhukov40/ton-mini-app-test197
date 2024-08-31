@@ -30,3 +30,11 @@ yarn dev
 5. go to -> "http://localhost:3000/map"
 
 
+### To do
+- add "[dexie.js](https://dexie.org/)"
+- add "[peer.js](https://peerjs.com/)"
+- add p2p sync time algoritm 
+- add protocol description of communication
+-
+-
+
