@@ -1,10 +1,18 @@
 import { DBEventService, Event } from './DBEventService';
-import { DBCreationService } from './DBCreationService';
+import { DBCreationService, IStoreSchema } from './DBCreationService';
 
 
 interface IDBGameService {
     addEvent(event: Event): void;
 }
+
+const storeSchema: IStoreSchema = {
+    permission: '++id, name, status, describe, type',
+    events: '++id, code, message',
+    properties: '++id, name',
+    functions: '++id, name',
+    tags: '++id, name',
+};
 
 class DBGameService implements IDBGameService {
     private dataBaseService: DBCreationService;
@@ -12,7 +20,7 @@ class DBGameService implements IDBGameService {
 
     constructor (name: string) {
         this.dataBaseService = new DBCreationService();
-        this.dataBaseService.create(name);
+        this.dataBaseService.create(name, storeSchema);
         this.dBEventService = new DBEventService(this.dataBaseService.get());
     }
 

@@ -2,7 +2,7 @@ import Dexie, { Transaction, Version, type EntityTable } from 'dexie';
 
 
 interface IDBCreationService {
-    create(name: string): void;
+    create(name: string, schema: IStoreSchema): void;
     isExist(): boolean;
     get(): Dexie;
 }
@@ -11,21 +11,12 @@ interface IStoreSchema {
     [tableName: string]: string | null;
 }
 
-//
-const storeSchema: IStoreSchema = {
-    permission: '++id, name, status, describe, type',
-    events: '++id, code, message',
-    properties: '++id, name',
-    functions: '++id, name',
-    tags: '++id, name',
-};
-
 class DBCreationService implements IDBCreationService {
     private dexieDB: Dexie = undefined as any;
 
-    create(name: string): void {
+    create(name: string, schema: IStoreSchema): void {
         this.dexieDB = new Dexie(name);
-        this.dexieDB.version(1).stores(storeSchema);
+        this.dexieDB.version(1).stores(schema);
     }
 
     isExist(): boolean {
@@ -38,3 +29,4 @@ class DBCreationService implements IDBCreationService {
 }
 
 export { DBCreationService };
+export type { IStoreSchema };

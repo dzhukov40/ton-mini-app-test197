@@ -8,6 +8,7 @@ interface Event {
 
 interface IDBEventService {
     getTable(): Table;
+    clear(): void;
 }
 
 class DBEventService implements IDBEventService {
@@ -27,6 +28,9 @@ class DBEventService implements IDBEventService {
         this.table.add(event);
     }
 
+    clear(): void {
+        this.table.clear();
+    }
 }
 
 export { DBEventService };
