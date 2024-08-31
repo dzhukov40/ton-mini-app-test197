@@ -1,6 +1,6 @@
 'use client';
 
-import { DBGameService } from '@/services/DBGaneService';
+import { DBGameService } from '@/services/DB/DBGaneService';
 import { useState } from 'react';
 
 
