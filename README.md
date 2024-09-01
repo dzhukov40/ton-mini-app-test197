@@ -34,7 +34,21 @@ yarn dev
 1. install libs
 - "npm install dexie"
 - "npm install dexie-react-hooks"
-2. add file ""
+2. add file "services/DB/DBCreationService.tsx"
+3. add file "services/DB/DBEventService.tsx"
+4. add file "services/DB/DBCreationService.tsx"
+5. add file "app/dexie-test/page.tsx"
+
+
+### Add peer.js
+1. install libs
+- "npm install peerjs"
+2. add p2p folder
+3. create files for make operation with lib "peerjs" abstract
+- we use UUIDs as identificators of peers.
+- if we want send data we send to UUID.
+- if we receive data, we receive it from some UUID.
+
 
 
 ### To do
