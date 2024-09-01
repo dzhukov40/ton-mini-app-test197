@@ -47,6 +47,14 @@ class P2pConnectionManager {
         return key;
     }
 
+    addFromLocalPoint(point: P2pPoint) : string {
+        this.throwErrorIfPointNotLocal(point);
+
+        //TODO: add
+
+        return "34";
+    }
+
     delete(id: string): void {
         this.addedConnections.delete(id);
     }
@@ -106,6 +114,12 @@ class P2pConnectionManager {
     private throwErrorIfOpendConnectionNotExist(id: string): void {
         if (this.opendConnections.has(id) == false) {
             throw new Error(`Connection not open`);
+        }
+    }
+
+    private throwErrorIfPointNotLocal(point: P2pPoint): void {
+        if (point.isLocal() == false) {
+            throw new Error(`Point not local`);
         }
     }
 }
